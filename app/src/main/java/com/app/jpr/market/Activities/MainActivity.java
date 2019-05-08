@@ -59,10 +59,7 @@ public class MainActivity extends AppCompatActivity
 
         Button button = findViewById(R.id.first);
         Button button1 = findViewById(R.id.second);
-        recyclerView = findViewById(R.id.recycler_item1);
-        recyclerView1 = findViewById(R.id.recycler_item2);
-        recyclerView2 = findViewById(R.id.recycler_item3);
-        recyclerView3 = findViewById(R.id.recycler_item4);
+
 
         cardView = findViewById(R.id.cardview);
         seeAll = findViewById(R.id.SeeAll_BTN);
