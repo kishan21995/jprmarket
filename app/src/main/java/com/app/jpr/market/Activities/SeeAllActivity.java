@@ -14,7 +14,6 @@ import com.app.jpr.market.R;
 import com.app.jpr.market.adapter.CourseListAdapter;
 import com.app.jpr.market.models.CatagoryResponse;
 import com.app.jpr.market.retrofit.RestClient;
-import com.app.jpr.market.util.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +24,7 @@ import retrofit2.Response;
 
 
 
-
-        import android.content.Intent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,7 +39,7 @@ import com.app.jpr.market.R;
 import com.app.jpr.market.adapter.CourseListAdapter;
 import com.app.jpr.market.models.CatagoryResponse;
 import com.app.jpr.market.retrofit.RestClient;
-import com.app.jpr.market.util.AppUtils;
+import com.app.jpr.market.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,7 +73,7 @@ import retrofit2.Response;
 
                 //show progress dialog
                // AppUtils.showProgressDialog(com.app.jpr.market.Activities.SeeAllActivity.this);
-                AppUtils.showProgressDialog(SeeAllActivity.this,"Please wait...");
+                Utils.showProgressDialog(SeeAllActivity.this,"Please wait...");
 
 
 
@@ -87,7 +85,7 @@ import retrofit2.Response;
                         categoryResponse = response.body();
                         if (response.isSuccessful()) {
                             if (categoryResponse != null && categoryResponse.size() > 0) {
-                                AppUtils.dismisDialog(); //dismiss progress dialog
+                                Utils.dismissProgressDialog(); //dismiss progress dialog
 
                                 Log.d("Api Response :", "Got Success from Api");
                                 CourseListAdapter courseListAdapter = new CourseListAdapter(getApplicationContext());
@@ -113,7 +111,7 @@ import retrofit2.Response;
 
                     @Override
                     public void onFailure(Call<List<CatagoryResponse>> call, Throwable t) {
-                        AppUtils.dismisDialog();
+                        Utils.dismissProgressDialog();
 
                     }
                 });
