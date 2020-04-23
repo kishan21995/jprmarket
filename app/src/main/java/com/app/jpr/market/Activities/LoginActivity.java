@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                                             Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
-                                            intent.putExtra("USERNAME", "gmail");
+                                            intent.putExtra("USERNAME", "gmaii");
                                             intent.putExtra("PASSWORD", "password");
                                             startActivity(intent);
                                             finish();
